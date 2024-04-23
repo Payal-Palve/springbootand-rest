@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- <bean class="com.pojo.Address" name="address">
+<property name="city" value="pune"></property>
+<property name="pincode" value="401158"></property>
+</bean> -->
+<bean class="com.pojo.Address" name="address">
+<constructor-arg name="city" value="pune"></constructor-arg>
+<constructor-arg name="pincode" value="90234"></constructor-arg>
+</bean>
+
+<bean class="com.pojo.Employee" name="emp" autowire="byName">
+<property name="id" value="101"/>
+<property name="name" value="ankita"/>
+<property name="salary" value="34.90"/>
+</bean>
+
+<bean class="com.pojo.Employee" name="emp2" autowire="byType">
+<property name="id" value="101"/>
+<property name="name" value="ankita"/>
+<property name="salary" value="34.90"/>
+</bean>
+
+<bean class="com.pojo.Employee" name="emp3" autowire="constructor">
+<constructor-arg name="id" value="101"/>
+<constructor-arg name="name" value="ankita"/>
+<constructor-arg name="salary" value="34.90"/>
+</bean>
+
+</beans>

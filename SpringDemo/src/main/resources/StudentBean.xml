@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id="stdbean1" class="com.pojo.Student">
+<property name="stid" value="102"></property>
+<property name="name"  value="akash"></property>
+<property name="marks" value="90"></property>
+
+</bean>
+<bean id="stdbean2" class="com.pojo.Student">
+<constructor-arg name="stid" value="103"></constructor-arg>
+<constructor-arg name="name" value="sharad"></constructor-arg>
+<constructor-arg name="marks" value="70"></constructor-arg>
+</bean>
+
+<bean id="default" class="com.pojo.Student"></bean>
+</beans>
